@@ -84,7 +84,7 @@ client.on("message", message => {
       .setThumbnail(client.user.avatarURL())
       .setColor("c6df00")
       .setAuthor("The Prefix { V }").setDescription(`
-**<a:emoji_30:872142584875716689> ┇User Commands**
+**<:staffs:1019200046408937482> ┇User Commands**
 > bot - avatar - server
 > invite - support - kick
 > unlock - lock - role 
