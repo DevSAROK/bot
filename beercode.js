@@ -96,24 +96,24 @@ client.on("message", message => {
 > send - steal - shop(h)
 
 
-**<a:emoji_90:870361065786069012> ┇Game Comamnds**
+**<a:emoji_80:1019202142042595350> ┇Game Comamnds**
 > coinflip(cf) - slots(s)
 > fish(f)
 
 
-**<a:emoji_19:870357283006205953> ┇Gif Commands**
+**<:emoji_157:1019202939568537601> ┇Gif Commands**
 > anime - animel - boy
 > girl - baby - coulpe
 > smoking - sad - neon - emoji
 
 
-**<:emoji_79:870361413644873798> ┇Photo Commands**
+**<:emoji_134:1019203012339716148> ┇Photo Commands**
 > pgirl - pboy - pemoji
 > panime - pcoulpe
 
 
-> **<:emoji_91:870360971825254470> ┇Link**
-[Support Bot](https://discord.gg/qtkPbKeDSV) - [Invite Venom 🐙 Bot](https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot) - [Name YouTube](dev Rayan) - [Website](coming soon)
+> **<:link:1019203045495668748> ┇Link**
+[Support Bot](https://discord.gg/qtkPbKeDSV) - [Invite Venom Bot](https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot) - [Name YouTube](dev Rayan) - [Website](coming soon)
 `);
     message.channel.send(embed);
   }
@@ -226,9 +226,9 @@ ${client.guilds.cache.size}
 ${client.channels.cache.size}
 > <a:emoji_21:872142528042917980> | User
 ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
-> <a:emoji_21:872142528042917980> | Owner Bot 
-<@701546840063082601>
-> <a:emoji_21:872142528042917980> | Prefix Bot
+> <:brs_35:1011389310219595827> | Owner Bot 
+<@841245687533535242> 
+> <a:emoji_21 | Prefix Bot
 >`);
     message.channel.send(embed);
   }
@@ -281,14 +281,14 @@ client.on("message", async message => {
       )
    .setAuthor(client.user.username, client.user.avatarURL()).setDescription(`
    
-<a:emoji_21:872142528042917980> | Venom Prefix (V)
+<:emoji_134:1019203012339716148> | Venom Prefix (V)
 
       
-<a:emoji_21:872142528042917980> | Venom [Support](https://discord.gg/qtkPbKeDSV)
+<:emoji_134:1019203012339716148> | Venom [Support](https://discord.gg/qtkPbKeDSV)
 
-<a:emoji_21:872142528042917980> | Venom [Invite](https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot)
+<:emoji_134:1019203012339716148> | Venom [Invite](https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot)
 
-<a:emoji_21:872142528042917980> | Venom [Website](coming soon)`);
+<:emoji_134:1019203012339716148> | Venom [Website](coming soon)`);
 
     message.channel.send(help);
   }
