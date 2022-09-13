@@ -286,9 +286,9 @@ client.on("message", async message => {
       
 <a:emoji_21:872142528042917980> | Vela [Support](https://discord.gg/qtkPbKeDSV)
 
-<a:emoji_21:872142528042917980> | Cola [Invite](https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot)
+<a:emoji_21:872142528042917980> | Vela [Invite](https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot)
 
-<a:emoji_21:872142528042917980> | Cola [Website](coming soon)`);
+<a:emoji_21:872142528042917980> | Vela [Website](coming soon)`);
 
     message.channel.send(help);
   }
@@ -429,7 +429,7 @@ var aaaa = [
   "https://cdn.discordapp.com/attachments/733640065200160768/737282991348252683/tenor_13.gif"
 ];
 client.on("message", async message => {
-  if (message.content === ">animal") {
+  if (message.content === "Vanimal") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
     message.channel
@@ -484,7 +484,7 @@ var anime = [
   "https://cdn.discordapp.com/attachments/694694884459937862/735621470969135217/sasuke_al_moj.gif"
 ];
 client.on("message", async message => {
-  if (message.content === ">anime") {
+  if (message.content === "Vanime") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
     message.channel
@@ -531,7 +531,7 @@ var baby = [
   "https://cdn.discordapp.com/attachments/699339066029768796/730499512602329198/14.gif"
 ];
 client.on("message", async message => {
-  if (message.content === ">baby") {
+  if (message.content === "Vbaby") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
     message.channel
@@ -573,7 +573,7 @@ var yyyy = [
   "https://cdn.discordapp.com/attachments/694693923486171177/737203076691394570/a_e8727598fec06c471cc305358b97596b.gif"
 ];
 client.on("message", async message => {
-  if (message.content === ">boy") {
+  if (message.content === "Vboy") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
     message.channel
@@ -619,7 +619,7 @@ var coulpe = [
   "https://cdn.discordapp.com/attachments/694694675679936585/736897942342074428/a_8634244b88f7dc8eebbf416640489ef2.gif"
 ];
 client.on("message", async message => {
-  if (message.content === ">couple") {
+  if (message.content === "Vcouple") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
     message.channel
@@ -644,7 +644,7 @@ var emoji = [
   "https://media.discordapp.net/attachments/699520919328129055/803613686656401418/Haraketli_Emoji_261.gif"
 ];
 client.on("message", async message => {
-  if (message.content === ">emoji") {
+  if (message.content === "Vemoji") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
     message.channel
@@ -687,7 +687,7 @@ var girl = [
   "https://cdn.discordapp.com/attachments/787757651752779826/800852701335912498/image3-1.gif"
 ];
 client.on("message", async message => {
-  if (message.content === ">girl") {
+  if (message.content === "Vgirl") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
     message.channel
@@ -716,7 +716,7 @@ var neon = [
   "https://cdn.discordapp.com/attachments/764927608013193276/793756092261072936/image0.gif"
 ];
 client.on("message", async message => {
-  if (message.content === ">neon") {
+  if (message.content === "Vneon") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
     message.channel
@@ -754,7 +754,7 @@ var sad = [
   "https://cdn.discordapp.com/attachments/810651927334748180/810651982611742750/image0.gif"
 ];
 client.on("message", async message => {
-  if (message.content === ">sad") {
+  if (message.content === "Vsad") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
     message.channel
@@ -802,7 +802,7 @@ var smoking = [
   "https://cdn.discordapp.com/attachments/755893014915711047/826497192579170344/a_9b2ed05b287fc58858272fa4294a293b-1.gif"
 ];
 client.on("message", async message => {
-  if (message.content === ">smoking") {
+  if (message.content === "Vsmoking") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
     message.channel
@@ -839,7 +839,7 @@ var pppp = [
   "https://cdn.discordapp.com/attachments/737803691565907991/814870880378945566/b4a97fcecac0bbdce829914ebea72322.jpg"
 ];
 client.on("message", async message => {
-  if (message.content === ">panime") {
+  if (message.content === "Vpanime") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
     message.channel
@@ -898,7 +898,7 @@ var vvvv = [
   "https://cdn.discordapp.com/attachments/737803397314510849/798112373508407316/image5.jpg"
 ];
 client.on("message", async message => {
-  if (message.content === ">pboy") {
+  if (message.content === "Vpboy") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
     message.channel
@@ -944,7 +944,7 @@ var cccc = [
   "https://cdn.discordapp.com/attachments/764935873526628462/813878402637234176/instagram__CameronDallas.jpg"
 ];
 client.on("message", async message => {
-  if (message.content === ">pcouple") {
+  if (message.content === "Vpcouple") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
     message.channel
@@ -1001,7 +1001,7 @@ var mmmm = [
   "https://cdn.discordapp.com/attachments/772470455457808414/782274541920583720/image0.png"
 ];
 client.on("message", async message => {
-  if (message.content === ">pemoji") {
+  if (message.content === "Vpemoji") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
     message.channel
@@ -1034,7 +1034,7 @@ var gggg = [
   "https://cdn.discordapp.com/attachments/737803070217650227/814869221879971850/7f8e7a4cf39beccd3923584c7fa3bad6.jpg"
 ];
 client.on("message", async message => {
-  if (message.content === ">pgirl") {
+  if (message.content === "Vpgirl") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
     message.channel
