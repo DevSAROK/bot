@@ -8,12 +8,12 @@ exports.run = function(client, message,  args) {
   if(!miktar) return message.channel.send(new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
       .setColor("GREEN")
-      .setDescription(`**slots** You Can't More Than 🎰 50,000`))
+      .setDescription(`**slots** You Can't More Than 🎰 30,000`))
   //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
-if(miktar > 50000) return message.channel.send(new Discord.MessageEmbed()
+if(miktar > 30000) return message.channel.send(new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
       .setColor("GREEN")
-      .setDescription(`**slots**You Can't More Than 🎰 50,000`))
+      .setDescription(`**slots**You Can't More Than 🎰 30,000`))
   /////////////
 if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
   .setColor("#ffff00")
