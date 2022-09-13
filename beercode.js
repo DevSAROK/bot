@@ -8,7 +8,7 @@ const express = require("express");
 const ayarlar = require("./ayarlar.json");
 const Discord = require("discord.js");
 const client = new Discord.Client();
-client.login("ODA3MzUwNTM0OTAxMDcxOTMy.YB2txw.dLGC7fkU60QasBnj63BROnJZ0Io");
+client.login("MTAxNTcwMjA4MTM5MjM1NzQxNw.Gvdj2G.m5Xrga6feemz1YCRvwBFeJJg5V_RqQjrAWk9xo");
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
 
 //=== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
@@ -20,22 +20,22 @@ require("./util/eventLoader.js")(client);
 
 //===============================================================================\\
 client.on("ready", async () => {
-  client.user.setActivity(`>help | >invite |Server,${client.guilds.cache.size}`, {
+  client.user.setActivity(`Vhelp | Vinvite |Server,${client.guilds.cache.size}`, {
     type: "PLAYING"
   });
 });
 //===============================================================================\\
 client.on("message", emprator => {
-  if (emprator.content === ">invite") {
+  if (emprator.content === "Vinvite") {
     emprator.channel.send(
-      "https://discord.com/api/oauth2/authorize?client_id=807350534901071932&permissions=8&scope=bot"
+      "https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot"
     );
   }
 });
 //===============================================================================\\
 client.on("message", emprator => {
-  if (emprator.content === ">support") {
-    emprator.channel.send("https://discord.gg/DxytuacsyS");
+  if (emprator.content === "Vsupport") {
+    emprator.channel.send("https://discord.gg/qtkPbKeDSV");
   }
 });
 //===============================================================================\\
@@ -79,11 +79,11 @@ client.on("guildDelete", guild => {
 });
 //================================================================================\\
 client.on("message", message => {
-  if (message.content === ">help") {
+  if (message.content === "Vhelp") {
     const embed = new Discord.MessageEmbed()
       .setThumbnail(client.user.avatarURL())
       .setColor("c6df00")
-      .setAuthor("The Prefix { > }").setDescription(`
+      .setAuthor("The Prefix { V }").setDescription(`
 **<a:emoji_30:872142584875716689> ┇User Commands**
 > bot - avatar - server
 > invite - support - kick
@@ -113,14 +113,14 @@ client.on("message", message => {
 
 
 > **<:emoji_91:870360971825254470> ┇Link**
-[Support Bot](https://discord.gg/progresshome) - [Invite Kraken 🐙 Bot](https://discord.com/api/oauth2/authorize?client_id=807350534901071932&permissions=8&scope=bot) - [YouTube](coming soon) - [Website](coming soon)
+[Support Bot](https://discord.gg/qtkPbKeDSV) - [Invite Kraken 🐙 Bot](https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot) - [Name YouTube](dev Rayan) - [Website](coming soon)
 `);
     message.channel.send(embed);
   }
 });
 //===============================================================================\\
 client.on("message", msg => {
-  if (msg.content.startsWith(">clear")) {
+  if (msg.content.startsWith("Vclear")) {
     let args = msg.content.split(" ").slice(1);
 
     if (!msg.member.hasPermission("MANAGE_MESSAGES"))
@@ -140,7 +140,7 @@ client.on("message", msg => {
 });
 //===============================================================================\\
 client.on("message", russi => {
-  if (russi.content === ">server") {
+  if (russi.content === "Vserver") {
     let embed = new Discord.MessageEmbed()
       .setTitle(`${russi.guild.name}`) ///Russi
       .setThumbnail(client.user.avatarURL())
@@ -167,7 +167,7 @@ client.on("message", russi => {
 });
 //===============================================================================\\
 client.on("message", habdo => {
-  if (habdo.content.startsWith(">kick")) {
+  if (habdo.content.startsWith("Vkick")) {
     if (!habdo.guild) return;
     if (!habdo.member.hasPermission("KICK_MEMBERS"))
       return habdo.reply("**You don t have a ram**");
@@ -179,7 +179,7 @@ client.on("message", habdo => {
 });
 //===============================================================================\\
 client.on("message", message => {
-  if (message.content.startsWith(">role")) {
+  if (message.content.startsWith("Vrole")) {
     var roles = message.guild.roles.cache
       .map(roles => `${roles.name}, `)
       .join(" ");
@@ -191,7 +191,7 @@ client.on("message", message => {
 });
 //===============================================================================\\
 client.on("message", habdo => {
-  if (habdo.content.startsWith(">avatar")) {
+  if (habdo.content.startsWith("Vavatar")) {
     var embed = new Discord.MessageEmbed()
       .setAuthor(
         `${habdo.author.username}`,
@@ -217,7 +217,7 @@ client.on("message", habdo => {
 });
 //===============================================================================\\
 client.on("message", message => {
-  if (message.content === ">bot") {
+  if (message.content === "Vbot") {
     const embed = new Discord.MessageEmbed().setColor("#ffff00")
       .setDescription(`
 > <a:emoji_21:872142528042917980> | Server
@@ -235,7 +235,7 @@ ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
 });
 //===============================================================================\\
 client.on("message", message => {
-  if (message.content === ">lock") {
+  if (message.content === "Vlock") {
     if (!message.member.hasPermission("MANAGE_CHANNELS")) return;
     message.delete();
 
@@ -256,7 +256,7 @@ client.on("message", message => {
 
 //////////////////////////////////////////////////////////////////client.on("message", message => { if (message.content === prefix + "lockall") 
 client.on("message", message => {
-  if (message.content === ">unlock") {
+  if (message.content === "Vunlock") {
     if (!message.member.hasPermission("MANAGE_CHANNELS")) return;
     message.delete();
 
@@ -281,14 +281,14 @@ client.on("message", async message => {
       )
    .setAuthor(client.user.username, client.user.avatarURL()).setDescription(`
    
-<a:emoji_21:872142528042917980> | Kraken Prefix (>)
+<a:emoji_21:872142528042917980> | Vela Prefix (V)
 
       
-<a:emoji_21:872142528042917980> | Kraken [Support](https://discord.gg/DxytuacsyS)
+<a:emoji_21:872142528042917980> | Vela [Support](https://discord.gg/qtkPbKeDSV)
 
-<a:emoji_21:872142528042917980> | Krakem [Invite](https://discord.com/api/oauth2/authorize?client_id=807350534901071932&permissions=8&scope=bot)
+<a:emoji_21:872142528042917980> | Cola [Invite](https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot)
 
-<a:emoji_21:872142528042917980> | Kraken [Website](coming soon)`);
+<a:emoji_21:872142528042917980> | Cola [Website](coming soon)`);
 
     message.channel.send(help);
   }
