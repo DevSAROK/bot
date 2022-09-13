@@ -91,7 +91,7 @@ client.on("message", message => {
 > clear - server 
 
 
-**<:emoji_63:874713515502501960> ┇Economy Commands**
+**<a:Snowteam_Money:1013795093674725456> ┇Economy Commands**
 > daily(d) - cash(c) - work(w)
 > send - steal - shop(h)
 
