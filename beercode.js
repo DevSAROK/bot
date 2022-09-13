@@ -153,14 +153,14 @@ client.on("message", russi => {
         `${russi.guild.createdAt.toLocaleString()}`
       )
       .addField(
-        "> <:emoji_87:870361195272630293> Members : ",
+        "> <:emoji_81:1011388927724236841> Members : ",
         `${russi.guild.memberCount}`
       )
       .addField(
-        "> <:emoji_80:870361373895454800> Channels : ",
+        "> <:link:966425893658558494> Channels : ",
         `${russi.guild.channels.cache.size}`
       )
-      .addField("> <a:emoji_17:875044896619266049> Region : ", `${russi.guild.region}`)
+      .addField("> <:emoji_134:1019203012339716148> Region : ", `${russi.guild.region}`)
       .setTimestamp(); ///Russi
     russi.channel.send(embed);
   }
@@ -220,15 +220,15 @@ client.on("message", message => {
   if (message.content === "Vbot") {
     const embed = new Discord.MessageEmbed().setColor("#ffff00")
       .setDescription(`
-> <a:emoji_21:872142528042917980> | Server
+> <:emoji_134:1019203012339716148> | Server
 ${client.guilds.cache.size}
-> <a:emoji_21:872142528042917980> | Channel
+> <:link:966425893658558494> | Channel
 ${client.channels.cache.size}
-> <a:emoji_21:872142528042917980> | User
+> <:emoji_81:1011388927724236841> | User
 ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
 > <:brs_35:1011389310219595827> | Owner Bot 
 <@841245687533535242> 
-> <a:emoji_21 | Prefix Bot
+> <a:iNfO:1019202978382614548> | Prefix Bot
 >`);
     message.channel.send(embed);
   }
