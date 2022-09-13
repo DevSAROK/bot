@@ -113,7 +113,7 @@ client.on("message", message => {
 
 
 > **<:emoji_91:870360971825254470> ┇Link**
-[Support Bot](https://discord.gg/qtkPbKeDSV) - [Invite Kraken 🐙 Bot](https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot) - [Name YouTube](dev Rayan) - [Website](coming soon)
+[Support Bot](https://discord.gg/qtkPbKeDSV) - [Invite Venom 🐙 Bot](https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot) - [Name YouTube](dev Rayan) - [Website](coming soon)
 `);
     message.channel.send(embed);
   }
@@ -281,14 +281,14 @@ client.on("message", async message => {
       )
    .setAuthor(client.user.username, client.user.avatarURL()).setDescription(`
    
-<a:emoji_21:872142528042917980> | Vela Prefix (V)
+<a:emoji_21:872142528042917980> | Venom Prefix (V)
 
       
-<a:emoji_21:872142528042917980> | Vela [Support](https://discord.gg/qtkPbKeDSV)
+<a:emoji_21:872142528042917980> | Venom [Support](https://discord.gg/qtkPbKeDSV)
 
-<a:emoji_21:872142528042917980> | Vela [Invite](https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot)
+<a:emoji_21:872142528042917980> | Venom [Invite](https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot)
 
-<a:emoji_21:872142528042917980> | Vela [Website](coming soon)`);
+<a:emoji_21:872142528042917980> | Venom [Website](coming soon)`);
 
     message.channel.send(help);
   }
