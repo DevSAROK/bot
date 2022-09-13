@@ -13,7 +13,7 @@ exports.run = function(client, message,  args) {
 if(miktar > 50000) return message.channel.send(new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
       .setColor("GREEN")
-      .setDescription(`**slots**You Can't More Than <a:emoji_50:872142301789564969> 50,000`))
+      .setDescription(`**slots**You Can't More Than 🎰 50,000`))
   /////////////
 if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
   .setColor("#ffff00")
@@ -25,7 +25,7 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
 .setDescription(`<a:emoji_50:872142301789564969> The amount you entered is not a valid number !?`))
  let kazandin = miktar*3   
-  let slots = ["<:emoji_60:872141904383455272>","<:emoji_61:872141800482160641>","<:emoji_58:872142048680091670>","<:emoji_59:872142007471079445>"];
+  let slots = ["🍒","🍒","🍒",];
   //
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
   let result1 = Math.floor((Math.random() * slots.length));
