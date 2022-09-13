@@ -47,7 +47,7 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
   if (slots[result1] === slots[result2] && slots[result2] === slots[result3] ) {
     var text2 = `**
     ___SLOTS___  
- |<a:slatszela1:1019216116465291428><a:slatszela1:1019216116465291428|<a:slatszela1:1019216116465291428>|${message.author.username}
+ |<a:slatszela1:1019216116465291428><a:slatszela1:1019216116465291428><a:slatszela1:1019216116465291428>${message.author.username}
 |                  |
 |                  |**`;
           message.channel.send(text2).then(msg => {
