@@ -56,10 +56,10 @@ if(miktar === 'all' || miktar === 'all') {
                 .setColor('GREEN')
                 .setThumbnail('https://media.discordapp.net/attachments/852987040659931248/870484993980391424/image0.gif')
                 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))  
-.setDescription(`**__<a:emoji_31:875051634386935880> Payment Transferred!__**
+.setDescription(`**__🏛️ Payment Transferred!__**
 
 You Paid ${etiket}
-Add Balance <a:emoji_56:874712610396844135> __${miktar}+__
+Add Balance 💸 __${miktar}+__
 Send By ${message.author.username}`))
   db.add(`para_${etiket.id}`, miktar)
   db.add(`para_${message.author.id}`, -miktar)

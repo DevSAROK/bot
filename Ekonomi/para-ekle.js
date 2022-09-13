@@ -39,10 +39,10 @@ db.add(`para_${user.id}`, money)
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
 exports.conf = {
   enabled: true,
-  aliases: ["addcash"],
+  aliases: ["m"],
 };
 
 exports.help = {
-  name: 'addcash',
+  name: 'm',
 };//== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
  

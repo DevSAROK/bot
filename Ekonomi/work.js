@@ -26,7 +26,7 @@ let moneys = rastgeleMiktar(400,100);
       message.channel.send(new Discord.MessageEmbed()
                    .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
                    .setColor("YELLOW")
-                   .setDescription(`${work} you worked and ${moneys} <a:emoji_31:875051634386935880> you won!`))
+                   .setDescription(`${work} you worked and ${moneys} 🪙 you won!`))
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
 db.set(`çalışmasüresi_${message.author.id}`, Date.now())
 
