@@ -288,7 +288,7 @@ client.on("message", async message => {
 
 <:emoji_134:1019203012339716148> | Venom [Invite](https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot)
 
-<:emoji_134:1019203012339716148> | Venom [Website](coming soon)`);
+<:emoji_134:1019203012339716148> | Venom [Verfayd](coming soon)`);
 
     message.channel.send(help);
   }
