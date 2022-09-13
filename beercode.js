@@ -113,7 +113,7 @@ client.on("message", message => {
 
 
 > **<:link:1019203045495668748> ┇Link**
-[Support Bot](https://discord.gg/qtkPbKeDSV) - [Invite Venom Bot](https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot) - [Name YouTube](dev Rayan) - [Website](coming soon)
+[Support Bot](https://discord.gg/qtkPbKeDSV) - [Invite Venom Bot](https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot) - [Name YouTube](dev Rayan) - [Verfayd](coming soon)
 `);
     message.channel.send(embed);
   }
