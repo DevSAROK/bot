@@ -24,7 +24,7 @@ exports.run = async (client, message, args) => {
   if(!miktar) return message.channel.send(new Discord.MessageEmbed()
                                         .setColor("#ffff00")
                                         .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-                                        .setDescription(`You Can't More Than<:emoji_61:867523675304624148> 50,000`))
+                                        .setDescription(`You Can't More Them 💴 50,000`))
  if(miktar > 50000) return message.channel.send(new Discord.MessageEmbed()
                                         .setColor("#ffff00")
                                         .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))

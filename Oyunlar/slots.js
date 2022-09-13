@@ -8,7 +8,7 @@ exports.run = function(client, message,  args) {
   if(!miktar) return message.channel.send(new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
       .setColor("GREEN")
-      .setDescription(`**slots** You Can't More Than <a:emoji_50:872142301789564969> 50,000`))
+      .setDescription(`**slots** You Can't More Than 🎰 50,000`))
   //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
 if(miktar > 50000) return message.channel.send(new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
@@ -47,7 +47,7 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
   if (slots[result1] === slots[result2] && slots[result2] === slots[result3] ) {
     var text2 = `**
     ___SLOTS___  
-|<a:emoji_56:872142091059355690><a:emoji_56:872142091059355690><a:emoji_56:872142091059355690>|${message.author.username}
+|<❤️ ❤️<a:emoji_56:872142091059355690>|${message.author.username}
 |                  |
 |                  |**`;
           message.channel.send(text2).then(msg => {
@@ -65,7 +65,7 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
   } else {
     var text3 = `**
     ___SLOTS___  
-|<a:emoji_56:872142091059355690><a:emoji_56:872142091059355690><a:emoji_56:872142091059355690>|${message.author.username}
+|<a:emoji_56:872142091059355690> <a:emoji_56:872142091059355690> <a:emoji_56:872142091059355690>|${message.author.username}
 |                  |
 |                  |**`;
           message.channel.send(text3).then(msg => {
