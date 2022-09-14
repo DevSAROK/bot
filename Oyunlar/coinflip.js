@@ -49,7 +49,7 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
         var text2 = `**<@${message.author.id}> CoinFlip <a:emoji_2:1019238291649863791> Choice win Or Lost**`;
           message.channel.send(text2).then(msg => {
             setTimeout(() => {
-              msg.edit(`**<@${message.author.id}>spent cowoncy ${-kaybettin} <a:emoji_2:1019238291649863791> and chose heads
+              msg.edit(`**<@${message.author.id}>spent cowoncy ${-kaybettin} <:emoji_91:1019641091512868965> and chose heads
 The coin spins... <a:emoji_2:1019238291649863791> tail and you lost it all...loose (loose)**`);
             }, 3000);
           });
@@ -61,8 +61,8 @@ The coin spins... <a:emoji_2:1019238291649863791> tail and you lost it all...loo
         var text2 = `**<@${message.author.id}> CoinFlip <a:emoji_2:1019238291649863791> Choice win Or Lost**`;
           message.channel.send(text2).then(msg => {
             setTimeout(() => {
-              msg.edit(`**<@${message.author.id}> spent cowoncy ${kazandın} <a:emoji_2:1019238291649863791> and chose heads
-The coin spins... <a:emoji_10:875044674535030794> coinflip win (win)**`);
+              msg.edit(`**<@${message.author.id}> spent cowoncy ${kazandın} <:emoji_91:1019641091512868965> and chose heads
+The coin spins... <a:emoji_2:1019238291649863791> coinflip win (win)**`);
             }, 3000);
           });
     await db.set(`bahisoynama_${message.author.id}`, Date.now());   
