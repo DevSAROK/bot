@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
   
   let crime = await db.fetch(`bahisoynama_${message.author.id}`)
 
-      if (crime !== null && timeout - (Date.now() - crime) > 0) {
+      if (crime !== null && timeout - (Date.now() - crime) > 5) {
         
         let time = ms(timeout - (Date.now() - crime));
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\

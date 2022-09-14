@@ -20,7 +20,7 @@ if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
   .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
   .setDescription(`In your wallet to place a bet ${para ? "just " + para + ' <a:emoji_50:872142301789564969> there is!' : 'you have no money!'}`))
   /////////////////
-  if(isNaN(miktar) || miktar < 0) return message.channel.send(new Discord.MessageEmbed()
+  if(isNaN(miktar) || miktar < 5) return message.channel.send(new Discord.MessageEmbed()
 .setColor("RED")
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
 .setDescription(`<a:emoji_50:872142301789564969> The amount you entered is not a valid number !?`))
