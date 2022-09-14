@@ -45,7 +45,7 @@ client.on("message", message => {
   var channel = client.channels.cache.get("869140130387083264");
   if (!channel) return;
   var embed = new Discord.MessageEmbed()
-    .setColor("#0000ff")
+    .setColor("#020305")
     .setAuthor(message.author.username, message.author.displayAvatarURL())
     .addField(
       `✅ **New Suggestion**`,
@@ -82,7 +82,7 @@ client.on("message", message => {
   if (message.content === "Vhelp") {
     const embed = new Discord.MessageEmbed()
       .setThumbnail(client.user.avatarURL())
-      .setColor("c6df00")
+      .setColor("020305")
       .setAuthor("The Prefix { V }").setDescription(`
 **<:staffs:1019200046408937482> ┇User Commands**
 > bot - avatar - server
@@ -144,7 +144,7 @@ client.on("message", russi => {
     let embed = new Discord.MessageEmbed()
       .setTitle(`${russi.guild.name}`) ///Russi
       .setThumbnail(client.user.avatarURL())
-      .setColor("#ffff00") ///Russi
+      .setColor("#020305") ///Russi
       .setFooter(`Requested | ${russi.author.tag}`, russi.author.avatarURL())
       .addField("> 🆔 ID Server :", `${russi.guild.id}`)
       .addField("> :crown: Owner Server :", `${russi.guild.owner}`)
@@ -184,7 +184,7 @@ client.on("message", message => {
       .map(roles => `${roles.name}, `)
       .join(" ");
     let embed = new Discord.MessageEmbed()
-      .setColor("#ffff00")
+      .setColor("#020305")
       .addField("**Roles Server:**", `**[${roles}]**`);
     message.channel.send(embed);
   }
@@ -197,7 +197,7 @@ client.on("message", habdo => {
         `${habdo.author.username}`,
         habdo.author.avatarURL({ dynamic: true })
       )
-      .setColor("#ffff00")
+      .setColor("#020305")
       .setDescription(
         `**[Avatar Link](${habdo.author.avatarURL({
           dynamic: true,
@@ -218,7 +218,7 @@ client.on("message", habdo => {
 //===============================================================================\\
 client.on("message", message => {
   if (message.content === "Vbot") {
-    const embed = new Discord.MessageEmbed().setColor("#ffff00")
+    const embed = new Discord.MessageEmbed().setColor("#020305")
       .setDescription(`
 > <:emoji_134:1019203012339716148> | Server
 ${client.guilds.cache.size}
@@ -244,7 +244,7 @@ client.on("message", message => {
     let bwan = new Discord.MessageEmbed()
 
       .setFooter("Has Been Channel Lock")
-      .setColor("#ffff00");
+      .setColor("#020305");
     message.channel.send(bwan);
 
     message.channel.updateOverwrite(message.guild.id, {
@@ -263,7 +263,7 @@ client.on("message", message => {
     if (!message.channel.guild) return message.reply("SORRY IM IN SERVER");
     let bwan = new Discord.MessageEmbed()
       .setFooter("Has Been Channel unlock")
-      .setColor("#ffff00");
+      .setColor("#020305");
     message.channel.send(bwan);
 
     message.channel.updateOverwrite(message.guild.id, {
@@ -275,7 +275,7 @@ client.on("message", message => {
 client.on("message", async message => {
   if (message.content.startsWith(`<@${client.user.id}>`)) {
     let help = new Discord.MessageEmbed()
-      .setColor("#ffff00")
+      .setColor("#020305")
       .setThumbnail(
         ``
       )
@@ -436,7 +436,7 @@ client.on("message", async message => {
       .send({
         embed: {
           description: `Gif Animel`,
-          color: `#ffff00`,
+          color: `#020305`,
           image: {
             url: aaaa[Math.floor(Math.random() * aaaa.length)]
           }
@@ -538,7 +538,7 @@ client.on("message", async message => {
       .send({
         embed: {
           description: `Gif Baby`,
-          color: `#ffff00`,
+          color: `#020305`,
           image: {
             url: baby[Math.floor(Math.random() * baby.length)]
           }
@@ -580,7 +580,7 @@ client.on("message", async message => {
       .send({
         embed: {
           description: `Gif Boy`,
-          color: `#ffff00`,
+          color: `#020305`,
           image: {
             url: yyyy[Math.floor(Math.random() * yyyy.length)]
           }
@@ -651,7 +651,7 @@ client.on("message", async message => {
       .send({
         embed: {
           description: `Gif Emoji`,
-          color: `#ffff00`,
+          color: `#020305`,
           image: {
             url: emoji[Math.floor(Math.random() * emoji.length)]
           }
@@ -694,7 +694,7 @@ client.on("message", async message => {
       .send({
         embed: {
           description: `Gif Girl`,
-          color: `#ffff00`,
+          color: `#020305`,
           image: {
             url: girl[Math.floor(Math.random() * girl.length)]
           }
@@ -723,7 +723,7 @@ client.on("message", async message => {
       .send({
         embed: {
           description: `Gif Neon`,
-          color: `#ffff00`,
+          color: `#020305`,
           image: {
             url: neon[Math.floor(Math.random() * neon.length)]
           }
@@ -761,7 +761,7 @@ client.on("message", async message => {
       .send({
         embed: {
           description: `Gif Sad`,
-          color: `#ffff00`,
+          color: `#020305`,
           image: {
             url: sad[Math.floor(Math.random() * sad.length)]
           }
@@ -809,7 +809,7 @@ client.on("message", async message => {
       .send({
         embed: {
           description: `Gif Smoking`,
-          color: `#ffff00`,
+          color: `#020305`,
           image: {
             url: smoking[Math.floor(Math.random() * smoking.length)]
           }
@@ -846,7 +846,7 @@ client.on("message", async message => {
       .send({
         embed: {
           description: `Photo Anime`,
-          color: `#ffff00`,
+          color: `#020305`,
           image: {
             url: pppp[Math.floor(Math.random() * pppp.length)]
           }
@@ -905,7 +905,7 @@ client.on("message", async message => {
       .send({
         embed: {
           description: `Photo Boy`,
-          color: `#ffff00`,
+          color: `#020305`,
           image: {
             url: vvvv[Math.floor(Math.random() * vvvv.length)]
           }
@@ -951,7 +951,7 @@ client.on("message", async message => {
       .send({
         embed: {
           description: `Photo Couple`,
-          color: `#ffff00`,
+          color: `#020305`,
           image: {
             url: cccc[Math.floor(Math.random() * cccc.length)]
           }
@@ -1008,7 +1008,7 @@ client.on("message", async message => {
       .send({
         embed: {
           description: `Photo Emoji`,
-          color: `#ffff00`,
+          color: `#020305`,
           image: {
             url: mmmm[Math.floor(Math.random() * mmmm.length)]
           }
@@ -1041,7 +1041,7 @@ client.on("message", async message => {
       .send({
         embed: {
           description: `Photo Girl`,
-          color: `#ffff00`,
+          color: `#020305`,
           image: {
             url: gggg[Math.floor(Math.random() * gggg.length)]
           }
