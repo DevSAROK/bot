@@ -16,7 +16,7 @@ if(miktar > 150000) return message.channel.send(new Discord.MessageEmbed()
       .setDescription(`**slots**You Can't More Than 🎰 150,000`))
   /////////////
 if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
-  .setColor("#ffff00")
+  .setColor("#020305")
   .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
   .setDescription(`In your wallet to place a bet ${para ? "just " + para + ' <a:emoji_50:872142301789564969> there is!' : 'you have no money!'}`))
   /////////////////

@@ -17,14 +17,14 @@ exports.run = async (client, message, args) => {
         let time = ms(timeout - (Date.now() - crime));
     
         message.channel.send(new Discord.MessageEmbed()
-                      .setColor("dfe600")
+                      .setColor("020305")
                         .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
                         .setDescription(`For fishing ${time.seconds ? time.seconds + ' you have to wait seconds!' : 'try again!'}`))
       } else {
      let gerekenpara = 250
      let para = db.fetch(`para_${message.author.id}`)
      if(para < 250) return message.channel.send(new Discord.MessageEmbed()
-                      .setColor("dfe600")
+                      .setColor("020305")
                       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
                                                 .setDescription(`You have to rent a fishing line from your uncle for fishing! Money Required: 250 `))
@@ -37,8 +37,8 @@ exports.run = async (client, message, args) => {
          var kazandın = rastgeleMiktar(300,1000)
     let embed = new Discord.MessageEmbed()
       .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-      .setColor("dfe600")
-      .setDescription(`100k Venom 8k credit`)
+      .setColor("020305")
+      .setDescription(`1m Venom 20k credit`)
       message.channel.send(embed)   
      await db.set(`baliktutma_${message.author.id}`, Date.now());
     await db.add(`para_${message.author.id}`, kazandın);
