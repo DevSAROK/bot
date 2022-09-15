@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
         let time = ms(timeout - (Date.now() - crime));
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
         message.channel.send(new Discord.MessageEmbed()
-                      .setColor("#ffff00")
+                      .setColor("#020305")
                         .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
                         .setDescription(`<a:emoji_2:1019238291649863791> You Have A Cooldown For __coinflip__
                         **Time left**
@@ -22,16 +22,16 @@ exports.run = async (client, message, args) => {
       } else {
   var miktar = args[0]
   if(!miktar) return message.channel.send(new Discord.MessageEmbed()
-                                        .setColor("#ffff00")
+                                        .setColor("#020305")
                                         .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
                                         .setDescription(`You Can't More Them 💴 150,000`))
  if(miktar > 150000) return message.channel.send(new Discord.MessageEmbed()
-                                        .setColor("#ffff00")
+                                        .setColor("#020305")
                                         .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
                                         .setDescription(`You can bet up to 150000 <a:emoji_2:1018820058115481651>!`))   
 if(miktar > para) return message.channel.send(new Discord.MessageEmbed()
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
-                                              .setColor("#ffff00")
+                                              .setColor("#020305")
                                         .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
                                         .setDescription(`In your wallet to place a bet ${para ? "just " + para + ' <a:emoji_2:1019238291649863791> there is!' : 'you have no money!'}`))
         const result = [

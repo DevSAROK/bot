@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
   //-----------------------------------------------------------------------------------------------------\\
  if(miktar === 'all' || args[0] === 'all') {
    if(bankapara === 0) return message.channel.send(new Discord.MessageEmbed()
-.setColor("RED")
+.setColor("020305")
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
 .setDescription(`⛔ You have no money to withdraw from the bank!`))
 db.add(`bankapara_${message.author.id}`, -bankapara)

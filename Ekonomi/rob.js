@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
         let time = ms_2(timeout - (Date.now() - crime));
     
         message.channel.send(new Discord.MessageEmbed()
-                      .setColor("RED")
+                      .setColor("020305")
                         .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
                         .setDescription(`⏱ To rob ${time.minutes ? time.minutes + ' minute,' : ''} ${time.seconds ? time.seconds + ' you have to wait seconds!' : 'try again!'}`))
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\

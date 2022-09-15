@@ -8,22 +8,22 @@ module.exports.run = async (client, message, args) => {
 let money = args[1]    
   if(message.author.id !== ayarlar.botsahibi) return message.react("❌")
   if(!user) return message.channel.send(new Discord.MessageEmbed()
-.setColor("RED")
+.setColor("020305")
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
 .setDescription(`You must label the person to add money to your wallet.!`))
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
   if(!args[1]) return message.channel.send(new Discord.MessageEmbed()
-.setColor("RED")
+.setColor("020305")
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
 .setDescription(`⛔ You must enter the amount of money to be added to your wallet!`)) 
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
   if(isNaN(args[1])) return message.channel.send(new Discord.MessageEmbed()
-.setColor("RED")
+.setColor("020305")
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
 .setDescription(`⛔ You must enter the amount of money to be added to your wallet!`)) 
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
   if(args[1] < 0) return message.channel.send(new Discord.MessageEmbed()
-.setColor("RED")
+.setColor("020305")
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
 .setDescription(`🤔 The amount you entered is not a valid number!?`)
                                                       );    
