@@ -20,7 +20,7 @@ require("./util/eventLoader.js")(client);
 
 //===============================================================================\\
 client.on("ready", async () => {
-  client.user.setActivity(`Vhelp | Vinvite |Server,${client.guilds.cache.size}`, {
+  client.user.setActivity(`Vhelp  |Server,${client.guilds.cache.size}`, {
     type: "STREAMING"
   });
 });
@@ -35,7 +35,7 @@ client.on("message", emprator => {
 //===============================================================================\\
 client.on("message", emprator => {
   if (emprator.content === "Vsupport") {
-    emprator.channel.send("https://discord.gg/qtkPbKeDSV");
+    emprator.channel.send("https://discord.gg/GcZqSjsNb7");
   }
 });
 //===============================================================================\\
