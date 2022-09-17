@@ -20,7 +20,7 @@ require("./util/eventLoader.js")(client);
 
 //===============================================================================\\
 client.on("ready", async () => {
-  client.user.setActivity(`Vhelp  |Server,${client.guilds.cache.size}`, {
+  client.user.setActivity(`Vhelp | Server,${client.guilds.cache.size}`, {
     type: "STREAMING"
   });
 });
