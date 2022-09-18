@@ -8,24 +8,29 @@ const express = require("express");
 const ayarlar = require("./ayarlar.json");
 const Discord = require("discord.js");
 const client = new Discord.Client();
-client.login("MTAxNTcwMjA4MTM5MjM1NzQxNw.Gvdj2G.m5Xrga6feemz1YCRvwBFeJJg5V_RqQjrAWk9xo");
+client.login(
+  "MTAxNTcwMjA4MTM5MjM1NzQxNw.Gvdj2G.m5Xrga6feemz1YCRvwBFeJJg5V_RqQjrAWk9xo"
+);
 //== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
 
 //=== BEERCODE (https://discord.gg/ew3dpTu4Z5) BEERCODE ==\\
 
-const log = message => {
+const log = (message) => {
   console.log(` ${message}`);
 };
 require("./util/eventLoader.js")(client);
 
 //===============================================================================\\
 client.on("ready", async () => {
-  client.user.setActivity(`Vhelp | Vinvite |  Server,${client.guilds.cache.size}`, {
-    type: "STREAMING"
-  });
+  client.user.setActivity(
+    `Vhelp | Vinvite |  Server,${client.guilds.cache.size}`,
+    {
+      type: "STREAMING",
+    }
+  );
 });
 //===============================================================================\\
-client.on("message", emprator => {
+client.on("message", (emprator) => {
   if (emprator.content === "Vinvite") {
     emprator.channel.send(
       "https://discord.com/api/oauth2/authorize?client_id=1015702081392357417&permissions=8&scope=bot"
@@ -33,13 +38,13 @@ client.on("message", emprator => {
   }
 });
 //===============================================================================\\
-client.on("message", emprator => {
+client.on("message", (emprator) => {
   if (emprator.content === "Vsupport") {
     emprator.channel.send("https://discord.gg/GcZqSjsNb7");
   }
 });
 //===============================================================================\\
-client.on("message", message => {
+client.on("message", (message) => {
   if (message.guild) return;
   if (message.author.bot) return;
   var channel = client.channels.cache.get("869140130387083264");
@@ -55,12 +60,12 @@ client.on("message", message => {
     .setFooter(`${message.author.username}`)
     .setThumbnail(message.author.displayAvatarURL())
     .setTimestamp();
-  channel.send(embed).then(c => {
+  channel.send(embed).then((c) => {
     c.react("").then(() => c.react(""));
   });
 });
 //===============================================================================\\
-client.on("guildCreate", guild => {
+client.on("guildCreate", (guild) => {
   client.channels.cache.get("870341021186265188").send(`
 ✅ **Join Server**: ${client.guilds.cache.size}
 🔠 **Server Name**: ${guild.name}
@@ -69,7 +74,7 @@ client.on("guildCreate", guild => {
 👥 **Member Count**: ${guild.memberCount}**`);
 });
 ////////////////////////////////////////////
-client.on("guildDelete", guild => {
+client.on("guildDelete", (guild) => {
   client.channels.cache.get("870341021186265188").send(`
 ❎ **Lift Server**: ${client.guilds.cache.size}
 🔠 **Server Name**: ${guild.name}
@@ -78,7 +83,7 @@ client.on("guildDelete", guild => {
 👥 **Member Count**: ${guild.memberCount}**`);
 });
 //================================================================================\\
-client.on("message", message => {
+client.on("message", (message) => {
   if (message.content === "Vhelp") {
     const embed = new Discord.MessageEmbed()
       .setThumbnail(client.user.avatarURL())
@@ -119,7 +124,7 @@ client.on("message", message => {
   }
 });
 //===============================================================================\\
-client.on("message", msg => {
+client.on("message", (msg) => {
   if (msg.content.startsWith("Vclear")) {
     let args = msg.content.split(" ").slice(1);
 
@@ -131,15 +136,15 @@ client.on("message", msg => {
 
     msg.delete();
 
-    msg.channel.bulkDelete(args[0]).catch(e => {
+    msg.channel.bulkDelete(args[0]).catch((e) => {
       msg.channel.send("You can only delete 100 messages at once.");
     });
 
-    msg.channel.send(`Delete Message`).then(m => m.delete({ timeout: 5000 }));
+    msg.channel.send(`Delete Message`).then((m) => m.delete({ timeout: 5000 }));
   }
 });
 //===============================================================================\\
-client.on("message", russi => {
+client.on("message", (russi) => {
   if (russi.content === "Vserver") {
     let embed = new Discord.MessageEmbed()
       .setTitle(`${russi.guild.name}`) ///Russi
@@ -160,13 +165,16 @@ client.on("message", russi => {
         "> <:link:966425893658558494> Channels : ",
         `${russi.guild.channels.cache.size}`
       )
-      .addField("> <:emoji_134:1019203012339716148> Region : ", `${russi.guild.region}`)
+      .addField(
+        "> <:emoji_134:1019203012339716148> Region : ",
+        `${russi.guild.region}`
+      )
       .setTimestamp(); ///Russi
     russi.channel.send(embed);
   }
 });
 //===============================================================================\\
-client.on("message", habdo => {
+client.on("message", (habdo) => {
   if (habdo.content.startsWith("Vkick")) {
     if (!habdo.guild) return;
     if (!habdo.member.hasPermission("KICK_MEMBERS"))
@@ -178,10 +186,10 @@ client.on("message", habdo => {
   }
 });
 //===============================================================================\\
-client.on("message", message => {
+client.on("message", (message) => {
   if (message.content.startsWith("Vrole")) {
     var roles = message.guild.roles.cache
-      .map(roles => `${roles.name}, `)
+      .map((roles) => `${roles.name}, `)
       .join(" ");
     let embed = new Discord.MessageEmbed()
       .setColor("#020305")
@@ -190,7 +198,7 @@ client.on("message", message => {
   }
 });
 //===============================================================================\\
-client.on("message", habdo => {
+client.on("message", (habdo) => {
   if (habdo.content.startsWith("Vavatar")) {
     var embed = new Discord.MessageEmbed()
       .setAuthor(
@@ -202,7 +210,7 @@ client.on("message", habdo => {
         `**[Avatar Link](${habdo.author.avatarURL({
           dynamic: true,
           format: "png",
-          size: 1024
+          size: 1024,
         })})**`
       )
       .setImage(
@@ -216,7 +224,7 @@ client.on("message", habdo => {
   }
 });
 //===============================================================================\\
-client.on("message", message => {
+client.on("message", (message) => {
   if (message.content === "Vbot") {
     const embed = new Discord.MessageEmbed().setColor("#020305")
       .setDescription(`
@@ -234,7 +242,7 @@ V`);
   }
 });
 //===============================================================================\\
-client.on("message", message => {
+client.on("message", (message) => {
   if (message.content === "Vlock") {
     if (!message.member.hasPermission("MANAGE_CHANNELS")) return;
     message.delete();
@@ -248,14 +256,14 @@ client.on("message", message => {
     message.channel.send(bwan);
 
     message.channel.updateOverwrite(message.guild.id, {
-      SEND_MESSAGES: false
+      SEND_MESSAGES: false,
     });
   }
 });
 ////////////////////////////////////////////////////////////////
 
-//////////////////////////////////////////////////////////////////client.on("message", message => { if (message.content === prefix + "lockall") 
-client.on("message", message => {
+//////////////////////////////////////////////////////////////////client.on("message", message => { if (message.content === prefix + "lockall")
+client.on("message", (message) => {
   if (message.content === "Vunlock") {
     if (!message.member.hasPermission("MANAGE_CHANNELS")) return;
     message.delete();
@@ -267,19 +275,17 @@ client.on("message", message => {
     message.channel.send(bwan);
 
     message.channel.updateOverwrite(message.guild.id, {
-      SEND_MESSAGES: true
+      SEND_MESSAGES: true,
     });
   }
 });
 //===============================================================================\\
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content.startsWith(`<@${client.user.id}>`)) {
     let help = new Discord.MessageEmbed()
       .setColor("#020305")
-      .setThumbnail(
-        ``
-      )
-   .setAuthor(client.user.username, client.user.avatarURL()).setDescription(`
+      .setThumbnail(``)
+      .setAuthor(client.user.username, client.user.avatarURL()).setDescription(`
    
 <:emoji_134:1019203012339716148> | Venom Prefix (V)
 
@@ -301,25 +307,25 @@ client.aliases = new Discord.Collection();
 fs.readdir("./Destek/", (err, files) => {
   if (err) console.error(err);
   log(`${files.length} Installing support command...`);
-  files.forEach(f => {
+  files.forEach((f) => {
     //== BEERCODE (https://discord.gg/DxytuacsyS) BEERCODE ==\\
 
     let props = require(`./Destek/${f}`);
     log(`Support Command Installed: ${props.help.name}.`);
     client.commands.set(props.help.name, props);
-    props.conf.aliases.forEach(alias => {
+    props.conf.aliases.forEach((alias) => {
       client.aliases.set(alias, props.help.name);
     });
   });
 });
 //== BEERCODE (https://discord.gg/DxytuacsyS) BEERCODE ==\\
 
-client.load = command => {
+client.load = (command) => {
   return new Promise((resolve, reject) => {
     try {
       let cmd = require(`./Destek/${command}`);
       client.commands.set(command, cmd);
-      cmd.conf.aliases.forEach(alias => {
+      cmd.conf.aliases.forEach((alias) => {
         client.aliases.set(alias, cmd.help.name);
       });
       resolve();
@@ -338,25 +344,25 @@ client.aliases = new Discord.Collection();
 fs.readdir("./Ekonomi/", (err, files) => {
   if (err) console.error(err);
   log(`${files.length} Economy command Loading ...`);
-  files.forEach(f => {
+  files.forEach((f) => {
     //== BEERCODE (https://discord.gg/DxytuacsyS) BEERCODE ==\\
 
     let props = require(`./Ekonomi/${f}`);
     log(`Economy Command Installed: ${props.help.name}.`);
     client.commands.set(props.help.name, props);
-    props.conf.aliases.forEach(alias => {
+    props.conf.aliases.forEach((alias) => {
       client.aliases.set(alias, props.help.name);
     });
   });
 });
 //== BEERCODE (https://discord.gg/DxytuacsyS) BEERCODE ==\\
 
-client.load = command => {
+client.load = (command) => {
   return new Promise((resolve, reject) => {
     try {
       let cmd = require(`./Ekonomi/${command}`);
       client.commands.set(command, cmd);
-      cmd.conf.aliases.forEach(alias => {
+      cmd.conf.aliases.forEach((alias) => {
         client.aliases.set(alias, cmd.help.name);
       });
       resolve();
@@ -375,23 +381,23 @@ client.aliases = new Discord.Collection();
 fs.readdir("./Oyunlar/", (err, files) => {
   if (err) console.error(err);
   log(`${files.length} Game command Loading ...`);
-  files.forEach(f => {
+  files.forEach((f) => {
     let props = require(`./Oyunlar/${f}`);
     log(`Game Command Installed: ${props.help.name}.`);
     client.commands.set(props.help.name, props);
-    props.conf.aliases.forEach(alias => {
+    props.conf.aliases.forEach((alias) => {
       client.aliases.set(alias, props.help.name);
     });
   });
 });
 //== BEERCODE (https://discord.gg/DxytuacsyS) BEERCODE ==\\
 
-client.load = command => {
+client.load = (command) => {
   return new Promise((resolve, reject) => {
     try {
       let cmd = require(`./Oyunlar/${command}`);
       client.commands.set(command, cmd);
-      cmd.conf.aliases.forEach(alias => {
+      cmd.conf.aliases.forEach((alias) => {
         client.aliases.set(alias, cmd.help.name);
       });
       resolve();
@@ -426,9 +432,9 @@ var aaaa = [
   "https://cdn.discordapp.com/attachments/733640065200160768/737282947119579216/tenor_9.gif",
   "https://cdn.discordapp.com/attachments/733640065200160768/737282750385487932/tenor_5.gif",
   "https://cdn.discordapp.com/attachments/733640065200160768/737282940760883210/tenor_10.gif",
-  "https://cdn.discordapp.com/attachments/733640065200160768/737282991348252683/tenor_13.gif"
+  "https://cdn.discordapp.com/attachments/733640065200160768/737282991348252683/tenor_13.gif",
 ];
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content === "Vanimal") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
@@ -438,11 +444,11 @@ client.on("message", async message => {
           description: `Gif Animel`,
           color: `#020305`,
           image: {
-            url: aaaa[Math.floor(Math.random() * aaaa.length)]
-          }
-        }
+            url: aaaa[Math.floor(Math.random() * aaaa.length)],
+          },
+        },
       })
-      .catch(e => {
+      .catch((e) => {
         client.log.error(e);
       });
   }
@@ -481,9 +487,9 @@ var anime = [
   "https://cdn.discordapp.com/attachments/697505578972348436/736388213421244477/Yblikw9Rj1.gif",
   "https://cdn.discordapp.com/attachments/694694884459937862/735947565966688306/a_d6e522c9e10db64260eccb3c3455733c.gif",
   "https://cdn.discordapp.com/attachments/697505578972348436/736388155229339708/zyJgqrsAUg.gif",
-  "https://cdn.discordapp.com/attachments/694694884459937862/735621470969135217/sasuke_al_moj.gif"
+  "https://cdn.discordapp.com/attachments/694694884459937862/735621470969135217/sasuke_al_moj.gif",
 ];
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content === "Vanime") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
@@ -493,11 +499,11 @@ client.on("message", async message => {
           description: `Gif Anime`,
           color: `#ffff00`,
           image: {
-            url: anime[Math.floor(Math.random() * anime.length)]
-          }
-        }
+            url: anime[Math.floor(Math.random() * anime.length)],
+          },
+        },
       })
-      .catch(e => {
+      .catch((e) => {
         client.log.error(e);
       });
   }
@@ -528,9 +534,9 @@ var baby = [
   "https://cdn.discordapp.com/attachments/699339066029768796/734965015739629599/image0-6.gif",
   "https://cdn.discordapp.com/attachments/699339066029768796/732175141567725639/image0.gif",
   "https://cdn.discordapp.com/attachments/699339066029768796/730498782265081876/bab3.gif",
-  "https://cdn.discordapp.com/attachments/699339066029768796/730499512602329198/14.gif"
+  "https://cdn.discordapp.com/attachments/699339066029768796/730499512602329198/14.gif",
 ];
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content === "Vbaby") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
@@ -540,11 +546,11 @@ client.on("message", async message => {
           description: `Gif Baby`,
           color: `#020305`,
           image: {
-            url: baby[Math.floor(Math.random() * baby.length)]
-          }
-        }
+            url: baby[Math.floor(Math.random() * baby.length)],
+          },
+        },
       })
-      .catch(e => {
+      .catch((e) => {
         client.log.error(e);
       });
   }
@@ -570,9 +576,9 @@ var yyyy = [
   "https://cdn.discordapp.com/attachments/694693923486171177/737039041022787624/image0.gif",
   "https://cdn.discordapp.com/attachments/694693923486171177/737039232065077269/image0-70.gif",
   "https://cdn.discordapp.com/attachments/694693923486171177/737039292832153640/kaan.gif.gif",
-  "https://cdn.discordapp.com/attachments/694693923486171177/737203076691394570/a_e8727598fec06c471cc305358b97596b.gif"
+  "https://cdn.discordapp.com/attachments/694693923486171177/737203076691394570/a_e8727598fec06c471cc305358b97596b.gif",
 ];
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content === "Vboy") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
@@ -582,11 +588,11 @@ client.on("message", async message => {
           description: `Gif Boy`,
           color: `#020305`,
           image: {
-            url: yyyy[Math.floor(Math.random() * yyyy.length)]
-          }
-        }
+            url: yyyy[Math.floor(Math.random() * yyyy.length)],
+          },
+        },
       })
-      .catch(e => {
+      .catch((e) => {
         client.log.error(e);
       });
   }
@@ -616,9 +622,9 @@ var coulpe = [
   "https://cdn.discordapp.com/attachments/694694675679936585/736898644808040538/a_e4931ce8b4c41a2f4bb15c51dfd0b898.gif",
   "https://cdn.discordapp.com/attachments/694694675679936585/736898505427386378/f6bd4fa420a9d8ce58c6519a90bc8bc0.gif",
   "https://cdn.discordapp.com/attachments/694694675679936585/736898257925570600/a_1e816625dd242018b144b924043a7933.gif",
-  "https://cdn.discordapp.com/attachments/694694675679936585/736897942342074428/a_8634244b88f7dc8eebbf416640489ef2.gif"
+  "https://cdn.discordapp.com/attachments/694694675679936585/736897942342074428/a_8634244b88f7dc8eebbf416640489ef2.gif",
 ];
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content === "Vcouple") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
@@ -628,11 +634,11 @@ client.on("message", async message => {
           description: `Gif Couple`,
           color: `#ffff00`,
           image: {
-            url: coulpe[Math.floor(Math.random() * coulpe.length)]
-          }
-        }
+            url: coulpe[Math.floor(Math.random() * coulpe.length)],
+          },
+        },
       })
-      .catch(e => {
+      .catch((e) => {
         client.log.error(e);
       });
   }
@@ -641,9 +647,9 @@ client.on("message", async message => {
 var emoji = [
   "https://media.discordapp.net/attachments/762954136744099842/799811562427777063/Enes_Acar_15.gif",
   "https://media.discordapp.net/attachments/762954136744099842/800835842422734898/4270_Panda.gif",
-  "https://media.discordapp.net/attachments/699520919328129055/803613686656401418/Haraketli_Emoji_261.gif"
+  "https://media.discordapp.net/attachments/699520919328129055/803613686656401418/Haraketli_Emoji_261.gif",
 ];
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content === "Vemoji") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
@@ -653,11 +659,11 @@ client.on("message", async message => {
           description: `Gif Emoji`,
           color: `#020305`,
           image: {
-            url: emoji[Math.floor(Math.random() * emoji.length)]
-          }
-        }
+            url: emoji[Math.floor(Math.random() * emoji.length)],
+          },
+        },
       })
-      .catch(e => {
+      .catch((e) => {
         client.log.error(e);
       });
   }
@@ -684,9 +690,9 @@ var girl = [
   "https://cdn.discordapp.com/attachments/787757651752779826/800850872401657886/dfdc034aab34632039e45f23a089278f.gif",
   "https://cdn.discordapp.com/attachments/787757651752779826/800848548798791680/image8-1.gif",
   "https://cdn.discordapp.com/attachments/787757651752779826/800859020608405514/gif1460.gif",
-  "https://cdn.discordapp.com/attachments/787757651752779826/800852701335912498/image3-1.gif"
+  "https://cdn.discordapp.com/attachments/787757651752779826/800852701335912498/image3-1.gif",
 ];
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content === "Vgirl") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
@@ -696,11 +702,11 @@ client.on("message", async message => {
           description: `Gif Girl`,
           color: `#020305`,
           image: {
-            url: girl[Math.floor(Math.random() * girl.length)]
-          }
-        }
+            url: girl[Math.floor(Math.random() * girl.length)],
+          },
+        },
       })
-      .catch(e => {
+      .catch((e) => {
         client.log.error(e);
       });
   }
@@ -713,9 +719,9 @@ var neon = [
   "https://cdn.discordapp.com/attachments/764927608013193276/812066790564823100/image0.gif",
   "https://cdn.discordapp.com/attachments/764927608013193276/779428418605023252/image0.gif",
   "https://cdn.discordapp.com/attachments/764927608013193276/780111245634043944/image0.gif",
-  "https://cdn.discordapp.com/attachments/764927608013193276/793756092261072936/image0.gif"
+  "https://cdn.discordapp.com/attachments/764927608013193276/793756092261072936/image0.gif",
 ];
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content === "Vneon") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
@@ -725,11 +731,11 @@ client.on("message", async message => {
           description: `Gif Neon`,
           color: `#020305`,
           image: {
-            url: neon[Math.floor(Math.random() * neon.length)]
-          }
-        }
+            url: neon[Math.floor(Math.random() * neon.length)],
+          },
+        },
       })
-      .catch(e => {
+      .catch((e) => {
         client.log.error(e);
       });
   }
@@ -751,9 +757,9 @@ var sad = [
   "https://cdn.discordapp.com/attachments/742107775475253259/821090832735928350/image0-24.gif",
   "https://cdn.discordapp.com/attachments/810651927334748180/811012066491629578/image0-34.gif",
   "https://cdn.discordapp.com/attachments/805854616511316014/821028902801506334/image0.gif",
-  "https://cdn.discordapp.com/attachments/810651927334748180/810651982611742750/image0.gif"
+  "https://cdn.discordapp.com/attachments/810651927334748180/810651982611742750/image0.gif",
 ];
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content === "Vsad") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
@@ -763,11 +769,11 @@ client.on("message", async message => {
           description: `Gif Sad`,
           color: `#020305`,
           image: {
-            url: sad[Math.floor(Math.random() * sad.length)]
-          }
-        }
+            url: sad[Math.floor(Math.random() * sad.length)],
+          },
+        },
       })
-      .catch(e => {
+      .catch((e) => {
         client.log.error(e);
       });
   }
@@ -799,9 +805,9 @@ var smoking = [
   "https://cdn.discordapp.com/attachments/755893014915711047/827044744408072223/image0-123.gif",
   "https://cdn.discordapp.com/attachments/755893014915711047/826498012410019930/a_88e5b4c03a185d0d03f84039036da416.gif",
   "https://cdn.discordapp.com/attachments/755893014915711047/826498127895986186/KAPTANman_48.gif",
-  "https://cdn.discordapp.com/attachments/755893014915711047/826497192579170344/a_9b2ed05b287fc58858272fa4294a293b-1.gif"
+  "https://cdn.discordapp.com/attachments/755893014915711047/826497192579170344/a_9b2ed05b287fc58858272fa4294a293b-1.gif",
 ];
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content === "Vsmoking") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
@@ -811,11 +817,11 @@ client.on("message", async message => {
           description: `Gif Smoking`,
           color: `#020305`,
           image: {
-            url: smoking[Math.floor(Math.random() * smoking.length)]
-          }
-        }
+            url: smoking[Math.floor(Math.random() * smoking.length)],
+          },
+        },
       })
-      .catch(e => {
+      .catch((e) => {
         client.log.error(e);
       });
   }
@@ -836,9 +842,9 @@ var pppp = [
   "https://cdn.discordapp.com/attachments/737803691565907991/804092913956945991/S_H_O_P.jpg",
   "https://cdn.discordapp.com/attachments/737803691565907991/814871045508956180/99cf9ff40f47e1f3faf0f85f78180f4c.jpg",
   "https://cdn.discordapp.com/attachments/737803691565907991/804092921480609803/MelDream_Meldream_0190.jpg",
-  "https://cdn.discordapp.com/attachments/737803691565907991/814870880378945566/b4a97fcecac0bbdce829914ebea72322.jpg"
+  "https://cdn.discordapp.com/attachments/737803691565907991/814870880378945566/b4a97fcecac0bbdce829914ebea72322.jpg",
 ];
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content === "Vpanime") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
@@ -848,11 +854,11 @@ client.on("message", async message => {
           description: `Photo Anime`,
           color: `#020305`,
           image: {
-            url: pppp[Math.floor(Math.random() * pppp.length)]
-          }
-        }
+            url: pppp[Math.floor(Math.random() * pppp.length)],
+          },
+        },
       })
-      .catch(e => {
+      .catch((e) => {
         client.log.error(e);
       });
   }
@@ -895,9 +901,9 @@ var vvvv = [
   "https://cdn.discordapp.com/attachments/737803397314510849/803455129093275678/image0.jpg",
   "https://cdn.discordapp.com/attachments/737803397314510849/803985207333748776/image1.png",
   "https://cdn.discordapp.com/attachments/752914781941268563/825347284506116116/image0.jpg",
-  "https://cdn.discordapp.com/attachments/737803397314510849/798112373508407316/image5.jpg"
+  "https://cdn.discordapp.com/attachments/737803397314510849/798112373508407316/image5.jpg",
 ];
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content === "Vpboy") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
@@ -907,11 +913,11 @@ client.on("message", async message => {
           description: `Photo Boy`,
           color: `#020305`,
           image: {
-            url: vvvv[Math.floor(Math.random() * vvvv.length)]
-          }
-        }
+            url: vvvv[Math.floor(Math.random() * vvvv.length)],
+          },
+        },
       })
-      .catch(e => {
+      .catch((e) => {
         client.log.error(e);
       });
   }
@@ -941,9 +947,9 @@ var cccc = [
   "https://cdn.discordapp.com/attachments/764935873526628462/793828180577222666/d68.PNG",
   "https://cdn.discordapp.com/attachments/764935873526628462/803987577958695022/image3.jpg",
   "https://cdn.discordapp.com/attachments/764935873526628462/803987515882602516/image1.jpg",
-  "https://cdn.discordapp.com/attachments/764935873526628462/813878402637234176/instagram__CameronDallas.jpg"
+  "https://cdn.discordapp.com/attachments/764935873526628462/813878402637234176/instagram__CameronDallas.jpg",
 ];
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content === "Vpcouple") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
@@ -953,11 +959,11 @@ client.on("message", async message => {
           description: `Photo Couple`,
           color: `#020305`,
           image: {
-            url: cccc[Math.floor(Math.random() * cccc.length)]
-          }
-        }
+            url: cccc[Math.floor(Math.random() * cccc.length)],
+          },
+        },
       })
-      .catch(e => {
+      .catch((e) => {
         client.log.error(e);
       });
   }
@@ -998,9 +1004,9 @@ var mmmm = [
   "https://cdn.discordapp.com/attachments/697145837062455411/813707238673088542/okk.png",
   "https://cdn.discordapp.com/attachments/697145837062455411/815693103226552340/e8.png",
   "https://cdn.discordapp.com/attachments/697145837062455411/815943754841981009/image0.png",
-  "https://cdn.discordapp.com/attachments/772470455457808414/782274541920583720/image0.png"
+  "https://cdn.discordapp.com/attachments/772470455457808414/782274541920583720/image0.png",
 ];
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content === "Vpemoji") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
@@ -1010,11 +1016,11 @@ client.on("message", async message => {
           description: `Photo Emoji`,
           color: `#020305`,
           image: {
-            url: mmmm[Math.floor(Math.random() * mmmm.length)]
-          }
-        }
+            url: mmmm[Math.floor(Math.random() * mmmm.length)],
+          },
+        },
       })
-      .catch(e => {
+      .catch((e) => {
         client.log.error(e);
       });
   }
@@ -1031,9 +1037,9 @@ var gggg = [
   "https://cdn.discordapp.com/attachments/737803070217650227/790954414621065226/image7.jpg",
   "https://cdn.discordapp.com/attachments/737803070217650227/783002678770663464/947772bf05bd5c1b58a5e91fcf4ccf59.jpg",
   "https://cdn.discordapp.com/attachments/737803070217650227/794200284632186890/c11.PNG",
-  "https://cdn.discordapp.com/attachments/737803070217650227/814869221879971850/7f8e7a4cf39beccd3923584c7fa3bad6.jpg"
+  "https://cdn.discordapp.com/attachments/737803070217650227/814869221879971850/7f8e7a4cf39beccd3923584c7fa3bad6.jpg",
 ];
-client.on("message", async message => {
+client.on("message", async (message) => {
   if (message.content === "Vpgirl") {
     if (message.author.bot) return;
     if (!message.channel.guild) return message.reply();
@@ -1043,11 +1049,11 @@ client.on("message", async message => {
           description: `Photo Girl`,
           color: `#020305`,
           image: {
-            url: gggg[Math.floor(Math.random() * gggg.length)]
-          }
-        }
+            url: gggg[Math.floor(Math.random() * gggg.length)],
+          },
+        },
       })
-      .catch(e => {
+      .catch((e) => {
         client.log.error(e);
       });
   }
