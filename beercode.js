@@ -229,7 +229,7 @@ ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
 > <:brs_35:1011389310219595827> | Owner Bot 
 <@841245687533535242> 
 > <a:iNfO:1019202978382614548> | Prefix Bot
->`);
+V`);
     message.channel.send(embed);
   }
 });
