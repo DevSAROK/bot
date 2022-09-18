@@ -20,8 +20,8 @@ require("./util/eventLoader.js")(client);
 
 //===============================================================================\\
 client.on("ready", async () => {
-  client.user.setActivity(` Vhelp | Vinvite |  Server,${client.guilds.cache.size}`, {
-    type: "STREAMING"
+  client.user.setActivity(`Vhelp | Vinvite |  Server,${client.guilds.cache.size}`, {
+    type: "WATCHING"
   });
 });
 //===============================================================================\\
